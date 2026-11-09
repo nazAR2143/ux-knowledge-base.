@@ -1,0 +1,58 @@
+name: 📚 Content Update or Addition
+description: Suggest adding or updating content in the knowledge base
+title: "[docs]: "
+labels: ["documentation", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Please fill in as much detail as possible.
+
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      description: Which section does this affect?
+      options:
+        - "01 — UX Foundations"
+        - "02 — Visual Design"
+        - "03 — Accessibility"
+        - "04 — Navigation & IA"
+        - "05 — Mobile & Responsive"
+        - "06 — Performance UX"
+        - "07 — Forms & Inputs"
+        - "08 — Content & UX Writing"
+        - "09 — Testing & Research"
+        - "10 — Checklists"
+        - "New section needed"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What needs to change?
+      description: Describe the update, addition, or correction
+      placeholder: "The WCAG contrast ratio for large text should be 3:1, not 4.5:1..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Authoritative Sources
+      description: Link to W3C, NNGroup, MDN, Google, Apple, or other accepted sources
+      placeholder: |
+        - https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum
+        - https://www.nngroup.com/articles/...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission checklist
+      options:
+        - label: I have checked that this information is not already covered
+        - label: I have included at least one authoritative source
+        - label: My suggested content follows the style guide in CONTRIBUTING.md

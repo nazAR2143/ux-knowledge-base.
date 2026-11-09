@@ -1,0 +1,51 @@
+name: CI — Link Check & Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Run weekly to catch broken external links
+    - cron: '0 9 * * 1'
+
+jobs:
+  markdown-lint:
+    name: Markdown Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint Markdown files
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: '**/*.md'
+          config: '.markdownlint.json'
+
+  link-check:
+    name: Check External Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --exclude-loopback
+            --exclude 'linkedin\.com'
+            --exclude 'amazon\.com'
+            '**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  spell-check:
+    name: Spell Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Spell check
+        uses: streetsidesoftware/cspell-action@v6
+        with:
+          files: '**/*.md'
+          config: '.cspell.json'
