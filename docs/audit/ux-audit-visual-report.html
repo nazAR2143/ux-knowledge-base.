@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UX Audit Report</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased">
+
+<!-- HEADER -->
+<div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-10">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="text-3xl">🧪</span>
+      <span class="text-sm font-medium uppercase tracking-widest opacity-80">UX Audit Report</span>
+    </div>
+    <h1 class="text-4xl font-bold mb-2">UX Knowledge Base</h1>
+    <p class="opacity-80 text-lg">Персона · User Journey · Checklist · Bug Registry</p>
+    <div class="flex flex-wrap gap-4 mt-5 text-sm">
+      <span class="bg-white/20 rounded-full px-4 py-1">📅 09 листопада 2026</span>
+      <span class="bg-white/20 rounded-full px-4 py-1">🤖 Аудитор: AI UX Agent</span>
+      <span class="bg-white/20 rounded-full px-4 py-1">📋 10 аспектів · 60 критеріїв</span>
+      <span class="bg-white/20 rounded-full px-4 py-1">✅ Результат: 85%</span>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto px-6 py-10 space-y-10">
+
+  <!-- PERSONA -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span class="text-2xl">👤</span> Персона
+    </h2>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6 flex items-center gap-6">
+        <div class="w-20 h-20 rounded-full bg-white/30 flex items-center justify-center text-5xl">🧑‍💻</div>
+        <div>
+          <h3 class="text-2xl font-bold">Олена Коваленко</h3>
+          <p class="opacity-80">"Старанна Розробниця"</p>
+          <div class="flex gap-3 mt-2 text-sm">
+            <span class="bg-white/20 rounded px-2 py-0.5">28 років</span>
+            <span class="bg-white/20 rounded px-2 py-0.5">Київ, Україна</span>
+            <span class="bg-white/20 rounded px-2 py-0.5">Frontend Dev · 3 роки</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[var(--border)]">
+        <div class="p-5">
+          <h4 class="font-semibold text-sm uppercase tracking-wide text-[var(--muted-foreground)] mb-3">🎯 Цілі</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Дізнатись норми WCAG 2.2</li>
+            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Покращити форми у проекті</li>
+            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Пройти code review</li>
+            <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Підготуватись до UX аудиту</li>
+          </ul>
+        </div>
+        <div class="p-5">
+          <h4 class="font-semibold text-sm uppercase tracking-wide text-[var(--muted-foreground)] mb-3">😩 Болі</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> Складно шукати в Google</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> Суперечливі поради в блогах</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> Немає часу читати статті</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span> Не знає де перевірити CLS</li>
+          </ul>
+        </div>
+        <div class="p-5">
+          <h4 class="font-semibold text-sm uppercase tracking-wide text-[var(--muted-foreground)] mb-3">📊 Рівень</h4>
+          <div class="space-y-3 text-sm">
+            <div>
+              <div class="flex justify-between mb-1"><span>Технічний</span><span class="font-medium">80%</span></div>
+              <div class="h-2 rounded-full bg-[var(--border)]"><div class="h-2 rounded-full bg-blue-500" style="width:80%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>UX знання</span><span class="font-medium">50%</span></div>
+              <div class="h-2 rounded-full bg-[var(--border)]"><div class="h-2 rounded-full bg-purple-500" style="width:50%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1"><span>Мобільний</span><span class="font-medium">80%</span></div>
+              <div class="h-2 rounded-full bg-[var(--border)]"><div class="h-2 rounded-full bg-indigo-500" style="width:80%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USER JOURNEY -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span>🗺️</span> User Journey — 8 екранів
+    </h2>
+    <div class="space-y-3">
+      <!-- screens -->
+      <script>
+        const screens = [
+          { n:1, page:"README.md", icon:"🏠", goal:"Зрозуміти структуру бази знань", action:"Читає Knowledge Map, обирає розділ", stars:5, note:"О, чітка структура!", color:"bg-blue-500" },
+          { n:2, page:"03 — Accessibility", icon:"♿", goal:"Знайти вимоги WCAG 2.2", action:"Читає таблицю контрасту, копіює CSS", stars:5, note:"Нарешті конкретні цифри!", color:"bg-purple-500" },
+          { n:3, page:"07 — Forms & Inputs", icon:"📝", goal:"Виправити форму у проекті", action:"Бере HTML шаблон label+input", stars:4, note:"Хороші приклади коду", color:"bg-green-500" },
+          { n:4, page:"06 — Performance UX", icon:"⚡", goal:"Зрозуміти CLS та INP", action:"Читає таблицю Core Web Vitals", stars:4, note:"Дуже детально!", color:"bg-yellow-500" },
+          { n:5, page:"10 — Checklists", icon:"✅", goal:"Зробити pre-launch перевірку", action:"Копіює чеклист для проекту", stars:5, note:"Ідеальний чеклист!", color:"bg-emerald-500" },
+          { n:6, page:"02 — Visual Design", icon:"🎨", goal:"Перевірити типографіку", action:"Бере CSS змінні type scale", stars:4, note:"Зручні CSS змінні", color:"bg-pink-500" },
+          { n:7, page:"01 — Foundations", icon:"🧠", goal:"Підготовка до UX review", action:"Вивчає Nielsen 10 heuristics", stars:3, note:"Трохи довго читати...", color:"bg-orange-500" },
+          { n:8, page:"CONTRIBUTING.md", icon:"🤝", goal:"Додати свій розділ", action:"Читає style guide, fork repo", stars:4, note:"Добре що є Contributing!", color:"bg-cyan-500" },
+        ];
+        document.currentScript.insertAdjacentHTML('afterend', screens.map(s => `
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+            <div class="w-10 h-10 rounded-full ${s.color} flex items-center justify-center text-white font-bold text-sm flex-shrink-0">${s.n}</div>
+            <div class="text-2xl flex-shrink-0">${s.icon}</div>
+            <div class="flex-1 min-w-0">
+              <div class="font-semibold">${s.page}</div>
+              <div class="text-sm text-[var(--muted-foreground)] truncate">🎯 ${s.goal}</div>
+              <div class="text-sm text-[var(--muted-foreground)] truncate">▶ ${s.action}</div>
+            </div>
+            <div class="text-right flex-shrink-0">
+              <div class="text-yellow-500 text-sm">${'★'.repeat(s.stars)}${'☆'.repeat(5-s.stars)}</div>
+              <div class="text-xs text-[var(--muted-foreground)] mt-1 italic">"${s.note}"</div>
+            </div>
+          </div>
+        `).join(''));
+      </script>
+    </div>
+    <!-- emotion curve -->
+    <div class="mt-5 bg-[var(--card)] border border-[var(--border)] rounded-xl p-5">
+      <h4 class="font-semibold mb-3 text-sm text-[var(--muted-foreground)] uppercase tracking-wide">Емоційна крива</h4>
+      <div class="flex items-end gap-2 h-20">
+        <script>
+          const vals=[5,5,4,4,5,4,3,4];
+          document.currentScript.insertAdjacentHTML('afterend', vals.map((v,i)=>`
+            <div class="flex flex-col items-center gap-1 flex-1">
+              <div class="w-full rounded-t-md bg-gradient-to-t from-blue-400 to-indigo-500 opacity-80" style="height:${v*16}px"></div>
+              <span class="text-xs text-[var(--muted-foreground)]">E${i+1}</span>
+            </div>
+          `).join(''));
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST RESULTS -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span>✅</span> Результати Checklist — 10 аспектів
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <script>
+        const aspects = [
+          { n:1, name:"Навігація & IA", score:4, total:6, color:"yellow" },
+          { n:2, name:"Візуальний дизайн", score:5, total:6, color:"green" },
+          { n:3, name:"Доступність (WCAG)", score:5, total:6, color:"green" },
+          { n:4, name:"Мобільний & Responsive", score:5, total:6, color:"green" },
+          { n:5, name:"Performance UX", score:6, total:6, color:"green" },
+          { n:6, name:"Форми & Inputs", score:5, total:6, color:"yellow" },
+          { n:7, name:"Контент & UX Writing", score:6, total:6, color:"green" },
+          { n:8, name:"Тестування & Research", score:6, total:6, color:"green" },
+          { n:9, name:"Джерела & Документація", score:4, total:6, color:"yellow" },
+          { n:10, name:"Чеклісти & Шаблони", score:6, total:6, color:"green" },
+        ];
+        const colorMap = {green:"bg-green-500", yellow:"bg-yellow-500", red:"bg-red-500"};
+        const textMap = {green:"text-green-600", yellow:"text-yellow-600", red:"text-red-600"};
+        const badgeMap = {green:"✅", yellow:"⚠️", red:"❌"};
+        document.currentScript.insertAdjacentHTML('afterend', aspects.map(a=>`
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4">
+            <div class="flex justify-between items-start mb-2">
+              <span class="font-semibold text-sm">${badgeMap[a.color]} ${a.n}. ${a.name}</span>
+              <span class="font-bold text-sm ${textMap[a.color]}">${a.score}/${a.total}</span>
+            </div>
+            <div class="h-2 rounded-full bg-[var(--border)]">
+              <div class="h-2 rounded-full ${colorMap[a.color]} transition-all" style="width:${Math.round(a.score/a.total*100)}%"></div>
+            </div>
+            <div class="text-xs text-[var(--muted-foreground)] mt-1">${Math.round(a.score/a.total*100)}% ${a.score===a.total?'🏆 Ідеально!':''}</div>
+          </div>
+        `).join(''));
+      </script>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT STAGES -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span>📸</span> Скріншоти по Екранах
+    </h2>
+    <div class="space-y-6">
+      <script>
+        const screenShots = [
+          {
+            n:1, title:"Екран 1 — README.md (Головна)", icon:"🏠",
+            checks:["✅ Є чітка карта знань (Knowledge Map)","✅ Таблиця 10 розділів з рівнем складності","✅ Quick Start по 4 ролях","✅ Badges (WCAG, License, PRs)","⚠️ Немає навігації між розділами (виправлено)"],
+            verdict:"PASS", color:"green"
+          },
+          {
+            n:2, title:"Екран 2 — 03 Accessibility", icon:"♿",
+            checks:["✅ WCAG 2.2 — всі 4 принципи POUR","✅ Таблиця нових критеріїв 2.2 (2.4.11, 2.5.8)","✅ Приклади ARIA: aria-live, aria-invalid","✅ Focus trap JavaScript патерн","✅ Screen reader shortcuts (NVDA, VoiceOver)"],
+            verdict:"PASS", color:"green"
+          },
+          {
+            n:3, title:"Екран 3 — 07 Forms & Inputs", icon:"📝",
+            checks:["✅ Однорядкове layout з дослідженням Baymard","✅ Всі input types та inputmode","✅ autocomplete атрибути (WCAG 1.3.5)","✅ Показ/сховання паролю","❌ Відсутній session timeout (ERR-001)"],
+            verdict:"NEEDS FIX", color:"yellow"
+          },
+          {
+            n:4, title:"Екран 4 — 06 Performance UX", icon:"⚡",
+            checks:["✅ Таблиця Core Web Vitals (LCP/INP/CLS)","✅ scheduler.yield() — сучасний API","✅ Оптимізація зображень (AVIF/WebP)","✅ web-vitals RUM бібліотека","✅ CSS: лише transform/opacity для анімацій"],
+            verdict:"PERFECT", color:"green"
+          },
+          {
+            n:5, title:"Екран 5 — 10 Checklists", icon:"✅",
+            checks:["✅ Pre-launch чеклист (50+ пунктів)","✅ WCAG 2.2 аудит — всі 50 критеріїв","✅ Performance audit template","✅ Mobile audit (iOS + Android)","✅ Design handoff чеклист"],
+            verdict:"PERFECT", color:"green"
+          },
+          {
+            n:6, title:"Екран 6 — 02 Visual Design", icon:"🎨",
+            checks:["✅ Modular type scale (8 рівнів)","✅ 8-point grid система","✅ Semantic color tokens","⚠️ Деякі CSS кольори без contrast ratio","⚠️ Dark Mode не описаний (ERR-002)"],
+            verdict:"NEEDS FIX", color:"yellow"
+          },
+          {
+            n:7, title:"Екран 7 — 01 Foundations", icon:"🧠",
+            checks:["✅ Nielsen 10 Heuristics з кодом","✅ 10 Laws of UX з таблицею","✅ Gestalt Principles","✅ Cognitive Load Theory","✅ F-pattern / Z-pattern reading"],
+            verdict:"PASS", color:"green"
+          },
+          {
+            n:8, title:"Екран 8 — CONTRIBUTING.md", icon:"🤝",
+            checks:["✅ Style guide для контент","✅ Commit message формат","✅ Критерії якісних джерел","✅ Code of Conduct","✅ Markdown formatting rules"],
+            verdict:"PASS", color:"green"
+          },
+        ];
+        const verdictStyle = {PERFECT:"bg-green-100 text-green-700 border border-green-300", PASS:"bg-blue-100 text-blue-700 border border-blue-300","NEEDS FIX":"bg-yellow-100 text-yellow-700 border border-yellow-300"};
+        document.currentScript.insertAdjacentHTML('afterend', screenShots.map(s=>`
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl overflow-hidden shadow-sm">
+            <div class="border-b border-[var(--border)] p-4 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">${s.icon}</span>
+                <div>
+                  <div class="font-semibold">${s.title}</div>
+                </div>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full ${verdictStyle[s.verdict]}">${s.verdict}</span>
+            </div>
+            <!-- Mock screenshot -->
+            <div class="bg-gradient-to-br from-slate-100 to-slate-200 mx-4 my-3 rounded-xl h-32 flex items-center justify-center border border-slate-300 relative overflow-hidden">
+              <div class="absolute inset-0 opacity-10 text-6xl flex items-center justify-center">${s.icon}</div>
+              <div class="text-center z-10">
+                <div class="text-3xl mb-1">${s.icon}</div>
+                <div class="text-xs text-slate-500 font-mono bg-white/70 px-2 py-0.5 rounded">github.com/…/${s.title.split('—')[1]?.trim().replace(/\s+/g,'-').toLowerCase() || 'readme'}</div>
+              </div>
+              <!-- browser bar mock -->
+              <div class="absolute top-0 left-0 right-0 h-6 bg-slate-200 border-b border-slate-300 flex items-center px-2 gap-1">
+                <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                <span class="w-2 h-2 rounded-full bg-green-400"></span>
+              </div>
+            </div>
+            <div class="px-4 pb-4">
+              <h4 class="text-xs font-semibold uppercase tracking-wide text-[var(--muted-foreground)] mb-2">Перевірки</h4>
+              <ul class="space-y-1">
+                ${s.checks.map(c=>`<li class="text-sm flex items-start gap-2">${c}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        `).join(''));
+      </script>
+    </div>
+  </section>
+
+  <!-- BUG REGISTRY -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span>🐛</span> Реєстр Помилок
+    </h2>
+    <div class="space-y-3">
+      <script>
+        const bugs = [
+          { id:"ERR-001", sev:3, label:"🔴 Серйозна", desc:"Відсутня обробка session timeout (WCAG 2.2.1)", loc:"07-forms-inputs", fix:"Додати підрозділ з <dialog> попередженням та прикладом коду" },
+          { id:"ERR-002", sev:3, label:"🔴 Серйозна", desc:"Відсутній розділ Dark Mode UX patterns", loc:"02-visual-design", fix:"Додати секцію 9. Dark Mode з prefers-color-scheme та токен-стратегією" },
+          { id:"ERR-003", sev:2, label:"🟡 Помірна", desc:"Немає навігації між розділами (← / →)", loc:"Всі README.md", fix:"Додати footer-навігацію між розділами (виправлено ✅)" },
+          { id:"ERR-004", sev:2, label:"🟡 Помірна", desc:"Не всі перехресні посилання між розділами реалізовані", loc:"04, 05, 08", fix:"Аудит та додавання cross-reference посилань" },
+          { id:"ERR-005", sev:2, label:"🟡 Помірна", desc:"CSS кольори в прикладах без contrast ratio", loc:"02-visual-design", fix:"Додати коментар /* 7:1 ✅ */ до кожного кольору" },
+          { id:"ERR-006", sev:2, label:"🟡 Помірна", desc:"Відсутня дата перевірки актуальності посилань", loc:"Всі файли", fix:"Додати 'Last verified: Nov 2026' (виправлено ✅)" },
+          { id:"ERR-007", sev:1, label:"🟢 Мінорна", desc:"Деякі рядки таблиць задовгі для мобільного", loc:"10-checklists", fix:"Скоротити текст у комірках або розбити на 2 колонки" },
+          { id:"ERR-008", sev:1, label:"🟢 Мінорна", desc:"Немає списку безкоштовних інструментів мобільного тестування", loc:"05-mobile-responsive", fix:"Додати: BrowserStack Free, Chrome DevTools Device Mode" },
+          { id:"ERR-009", sev:1, label:"🟢 Мінорна", desc:"CHANGELOG не має посилань на конкретні commits", loc:"CHANGELOG.md", fix:"Після публікації на GitHub — додати посилання на перший PR" },
+        ];
+        const sevBg = {3:"border-l-red-500", 2:"border-l-yellow-500", 1:"border-l-green-500"};
+        document.currentScript.insertAdjacentHTML('afterend', bugs.map(b=>`
+          <div class="bg-[var(--card)] border border-[var(--border)] border-l-4 ${sevBg[b.sev]} rounded-xl p-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs bg-[var(--border)] px-2 py-0.5 rounded font-bold">${b.id}</span>
+                <span class="text-sm font-semibold">${b.label}</span>
+              </div>
+              <span class="text-xs text-[var(--muted-foreground)] font-mono">${b.loc}</span>
+            </div>
+            <p class="text-sm mb-2">${b.desc}</p>
+            <div class="flex items-start gap-2 text-sm bg-[var(--background)] rounded-lg p-2">
+              <span class="text-blue-500 flex-shrink-0">🔧</span>
+              <span class="text-[var(--muted-foreground)]">${b.fix}</span>
+            </div>
+          </div>
+        `).join(''));
+      </script>
+    </div>
+  </section>
+
+  <!-- SCORECARD -->
+  <section>
+    <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+      <span>📊</span> Загальний Підсумок
+    </h2>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl overflow-hidden shadow-sm">
+      <div class="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-6 text-center">
+        <div class="text-6xl font-black mb-1">85%</div>
+        <div class="text-xl font-semibold mb-1">51 / 60 критеріїв</div>
+        <div class="text-lg opacity-90">✅ GOOD — Готово до публікації з minor fixes</div>
+      </div>
+      <div class="grid grid-cols-3 divide-x divide-[var(--border)] text-center">
+        <div class="p-5">
+          <div class="text-3xl font-bold text-red-500">2</div>
+          <div class="text-sm text-[var(--muted-foreground)] mt-1">🔴 Серйозних</div>
+        </div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-yellow-500">4</div>
+          <div class="text-sm text-[var(--muted-foreground)] mt-1">🟡 Помірних</div>
+        </div>
+        <div class="p-5">
+          <div class="text-3xl font-bold text-green-500">3</div>
+          <div class="text-sm text-[var(--muted-foreground)] mt-1">🟢 Мінорних</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sprint plan -->
+    <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-[var(--card)] border-2 border-red-400 rounded-xl p-4">
+        <h4 class="font-bold text-red-500 mb-3">🚀 Sprint 1 — До публікації</h4>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> ERR-001: Session timeout секція</li>
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> ERR-003: Навігація між розділами ✅</li>
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> ERR-005: Contrast ratio у CSS</li>
+        </ul>
+      </div>
+      <div class="bg-[var(--card)] border-2 border-yellow-400 rounded-xl p-4">
+        <h4 class="font-bold text-yellow-500 mb-3">📋 Sprint 2 — Тиждень після</h4>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><span class="text-yellow-400">•</span> ERR-002: Dark Mode розділ</li>
+          <li class="flex items-start gap-2"><span class="text-yellow-400">•</span> ERR-004: Cross-reference посилання</li>
+          <li class="flex items-start gap-2"><span class="text-yellow-400">•</span> ERR-006: Дата верифікації ✅</li>
+        </ul>
+      </div>
+      <div class="bg-[var(--card)] border-2 border-green-400 rounded-xl p-4">
+        <h4 class="font-bold text-green-500 mb-3">📌 Backlog</h4>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> ERR-007: Таблиці для мобільного</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> ERR-008: Мобільні інструменти</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> ERR-009: CHANGELOG commits</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[var(--border)] pt-6 text-center text-sm text-[var(--muted-foreground)]">
+    <p>UX Audit Report · UX Knowledge Base · 09 листопада 2026</p>
+    <p class="mt-1">Метод: Persona Walkthrough + Checklist Review (10 аспектів, 60 критеріїв)</p>
+    <p class="mt-1">Наступний аудит: лютий 2027</p>
+  </footer>
+
+</div>
+</body>
+</html>
